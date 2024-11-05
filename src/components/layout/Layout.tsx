@@ -1,4 +1,3 @@
-import styles from './Layout.module.css'
 import Menu from "../../components/menu/Menu";
 
 interface LayoutProps {
