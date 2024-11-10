@@ -5,7 +5,7 @@ Este projeto é uma aplicação em vite-react + Typescript. A aplicação permit
 ## Índice
 - [Instalação](#instalação)
 - [Funcionalidades](#funcionalidades)
-- [Assista ao vídeo no YouTube]()
+- [Assista ao vídeo no YouTube](https://youtu.be/Ee6QR3RMeuQ)
 - [Link do Vercel](https://challenge-quarta-sprint-arcl.vercel.app/)
 
 ## Instalação
