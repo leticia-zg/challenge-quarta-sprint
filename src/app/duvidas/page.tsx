@@ -9,7 +9,6 @@ import Image from 'next/image';
 
 import { useState } from 'react';
 
-// Definindo o esquema de validação
 const schema = yup.object().shape({
     duvida: yup.string().required("*Campo obrigatório"), 
 });
@@ -170,7 +169,7 @@ export default function Duvidas() {
                         )}
 
                         <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(8)}>
-                            <p className="p-pergunta">Como faço para agendar um serviço com um mecânico parceiro?</p>
+                            <p className="p-pergunta">Como posso atualizar meus dados cadastrais?</p>
                             <Image width={20} height={20}
                                 src={openIndex === 8 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
                                 aria-expanded={openIndex === 8}
@@ -182,24 +181,7 @@ export default function Duvidas() {
                         </article>
                         {openIndex === 8 && (
                             <div tabIndex={0} className="div-resposta">
-                                <p className="respostas">Para agendar um serviço, basta acessar a aba 'Mecânicos Parceiros', indicar sua região, selecionar a oficina de sua escolha e realizar um agendamento.</p>
-                            </div>
-                        )}
-
-                        <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(9)}>
-                            <p className="p-pergunta">Posso usar a mesma peça em outros veículos?</p>
-                            <Image width={20} height={20}
-                                src={openIndex === 9 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
-                                aria-expanded={openIndex === 9}
-                                className="seta-baixo"
-                                alt="seta"
-                                role="button"
-                                tabIndex={0}
-                            />
-                        </article>
-                        {openIndex === 9 && (
-                            <div tabIndex={0} className="div-resposta">
-                                <p className="respostas">Depende da peça e do modelo do veículo. Consulte sempre um mecânico para garantir a compatibilidade.</p>
+                                <p className="respostas">Para atualizar seus dados, acesse o portal do cliente Porto Seguro ou ligue para a central de atendimento.</p>
                             </div>
                         )}
                     </section>
@@ -208,7 +190,7 @@ export default function Duvidas() {
                         <form role="form" id="feedbackForm" onSubmit={handleSubmit(onSubmit)}>
                             <div className="div-chat">
                                 <label htmlFor="duvida" className="label-duvida">Escreva abaixo para que possamos aprimorar nossas dúvidas frequentes ou acesse o chat online para ser respondido(a) de imediato!</label>
-                                <Image width={44} height={44} 
+                                <img 
                                     src="/imgs/chat.png" 
                                     alt="chat" 
                                     className="chat" 
@@ -238,8 +220,8 @@ export default function Duvidas() {
                         </form>
                     </section>
                 </main>
-                <Footer />
             </Layout>
+            <Footer />
         </>
     );
 }

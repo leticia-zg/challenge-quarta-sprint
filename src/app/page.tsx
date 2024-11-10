@@ -236,13 +236,13 @@ export default function Home() {
             </article>
             {openIndex === 3 && (
               <div tabIndex={0} className="div-resposta">
-                <p className="respostas">Você pode se tornar um segurado diretamente pelo site da Porto Seguro, clicando em "Torne-se um Segurado" e preenchendo os dados necessários.</p>
+                <p className="respostas">Você pode se tornar um segurado diretamente pelo site da Porto Seguro, clicando em &quot;Torne-se um Segurado&quot; e preenchendo os dados necessários.</p>
               </div>
             )}
           </section>
         </main>
-        <Footer />
       </Layout>
+      <Footer />
     </>
   );
 }
