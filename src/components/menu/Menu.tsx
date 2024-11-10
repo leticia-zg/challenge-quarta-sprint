@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import Link from "next/link";
 import Image from 'next/image'; 
 import { useState } from 'react';
@@ -21,18 +21,22 @@ const Menu = () => {
                     role="img" 
                     width={130}  
                     height={56} 
-                    />
+                />
             </Link>
-            <Image
-                src={isClick ? "/imgs/menuaberto.png" : "/imgs/hamburger (1).png"} 
-                alt={isClick ? "menu-aberto" : "menu-fechado"} 
-                className="menu-icon"
-                role="menu"
+            <div
+                className="menu-icon-wrapper"
                 aria-expanded={isClick ? "true" : "false"}
                 onClick={toggleNavbar}
-                width={37}  
-                height={37}
-            />
+                role="button"
+                aria-label="Toggle menu"
+            >
+                <Image
+                    src={isClick ? "/imgs/menuaberto.png" : "/imgs/hamburger (1).png"} 
+                    alt={isClick ? "menu-aberto" : "menu-fechado"} 
+                    width={37}  
+                    height={37}
+                />
+            </div>
             <ul className={isClick ? "list aberto" : "list fechado"}>
                 <li><Link href="/">Início</Link></li>
                 <li><Link href="/integrantes">Integrantes</Link></li>
