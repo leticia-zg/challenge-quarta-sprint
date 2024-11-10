@@ -1,0 +1,354 @@
+body {
+    background-color: #fff;
+}
+
+.main-guincho {
+    margin-top: 120px;
+}
+ 
+@media (min-width: 576px) {
+    .main-guincho {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+}
+ 
+.h1-guincho {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    font-size: 2.2rem;
+    color: #000;
+}
+ 
+@media (min-width: 576px) {
+    .h1-guincho {
+        margin-left: -150px;
+    }
+}
+ 
+@media (min-width: 768px) {
+    .h1-guincho {
+        margin-bottom: 20px;
+        margin-left: -290px;
+    }
+}
+ 
+@media (min-width: 992px) {
+    .h1-guincho {
+        margin-left: -500px;
+    }
+}
+ 
+@media (min-width: 1200px) {
+    .h1-guincho {
+        margin-left: -900px;
+    }
+}
+ 
+.h2-guincho {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+ 
+@media (min-width: 576px) {
+    .h2-guincho {
+        margin-left: -220px;
+    }
+}
+ 
+@media (min-width: 768px) {
+    .h2-guincho {
+        display: flex;
+        justify-content: start;
+        font-weight: 500;
+        font-size: 1.2rem;
+        margin-left: -365px;
+    }
+}
+ 
+@media (min-width: 992px) {
+    .h2-guincho {
+        margin-left: -555px;
+        margin-top: -5px;
+    }
+}
+ 
+@media (min-width: 1200px) {
+    .h2-guincho {
+        margin-left: -955px;
+        margin-top: -5px;
+    }
+}
+ 
+.descricao-guincho {
+    font-weight: 500;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #000;
+}
+ 
+@media (min-width: 576px) {
+    .descricao-guincho {
+        margin-left: -165px;
+    }
+}
+ 
+@media (min-width: 768px) {
+    .descricao-guincho {
+        display: flex;
+        justify-content: start;
+        font-weight: 500;
+        font-size: 1.2rem;
+        margin-left: -310px;
+    }
+}
+ 
+@media (min-width: 992px) {
+    .descricao-guincho {
+        margin-left: -500px;
+        margin-top: 5px;
+    }
+}
+ 
+@media (min-width: 1200px) {
+    .descricao-guincho {
+        margin-left: -900px;
+        margin-top: 5px;
+    }
+}
+
+.info-list-guincho {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.info-list-guincho li {
+    font-size: 14px;
+    padding: 10px 0;
+    text-align: left;
+}
+
+@media (min-width: 1200px) {
+.info-list-guincho li {
+    margin: 10px;
+    margin-right: 20px;
+}
+}
+
+.preco-guincho span {
+    display: block;
+}
+ 
+@media (min-width: 992px) {
+    .preco-guincho span {
+        display: flex;
+        justify-content: center;
+    }
+}
+ 
+.preco-guincho {
+    padding: 5px;
+    width: 45%;
+    margin-left: 20px;
+    border: 2px dashed #007bff;
+}
+ 
+@media (min-width: 576px) {
+    .preco-guincho {
+        margin-top: 20px;
+        margin-left: -150px;
+    }
+}
+ 
+@media (min-width: 768px) {
+    .preco-guincho {
+        margin-left: -225px;
+        margin-top: 20px;
+    }
+}
+ 
+@media (min-width: 992px) {
+    .preco-guincho {
+        margin-left: -560px;
+        padding: 3px;
+        width: 20%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .preco-guincho {
+        margin-left: -900px;
+        padding: 3px;
+        width: 20%;
+    }
+}
+ 
+.imagem-guincho {
+    width: 90%;
+    height: 70%;
+    margin-top: 30px;
+    border: 1px solid #94D9F8;
+    border-radius: 5px;
+}
+ 
+@media (min-width: 576px) {
+    .imagem-guincho {
+        width: 437px;
+        height: 303px;
+    }
+}
+ 
+.imagem-container-guincho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ 
+form {
+    width: 85%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+ 
+@media (min-width: 576px) {
+    form {
+        width: 94%;
+    }
+}
+ 
+@media (min-width: 768px) {
+    form {
+        margin-left: 0px;
+        width: 80%;
+        margin-top: 30px;
+    }
+}
+ 
+.form-div-guincho {
+    width: 100%;
+    margin-left: 0px;
+    position: relative;
+}
+ 
+@media (min-width: 576px) {
+    .form-div-guincho {
+        margin-left: 20px;
+        margin: 10px;
+    }
+}
+ 
+@media (min-width: 576px) {
+    .form-div-guincho .form-label-guincho {
+        font-size: 18px;
+    }
+}
+ 
+.form-input-guincho {
+    width: 99%;
+    padding: 10px;
+    color: rgb(66, 66, 66);
+    border: 0;
+    border-bottom: 2px solid rgb(200, 200, 200);
+    outline: 0;
+    font-size: 16px;
+}
+ 
+.form-input-guincho:focus,
+.form-input-guincho:valid {
+    border-bottom: 2px solid #426ab8;
+}
+ 
+ 
+.final {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+ 
+.info-guincho {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+}
+ 
+.importante-info-guincho {
+    font-weight: bolder;
+    margin-top: -10px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    margin-left: 10px;
+}
+ 
+.campo-guincho {
+    color: black;
+    margin-left: 5px;
+}
+ 
+.submit-container-guincho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    width: 100%;
+}
+ 
+.submit-btn-guincho {
+    text-align: center;
+    background-color: #A5D364;
+    color: black;
+    font-size: 25px;
+    font-weight: 800;
+    width: 452px;
+    height: 47px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.form-div-guincho {
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px; /* Ajuste conforme necessário */
+}
+
+.form-label-guincho {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px; /* Espaço entre o label e o input */
+    color: rgb(66, 66, 66);
+}
+
+.form-input-guincho {
+    width: 100%;
+    padding: 10px;
+    color: rgb(66, 66, 66);
+    border: none;
+    border-bottom: 2px solid rgb(200, 200, 200);
+    outline: 0;
+    font-size: 16px;
+}
+
+.form-input-guincho:focus,
+.form-input-guincho:valid {
+    border-bottom: 2px solid #426ab8;
+}
+
+.error-guincho {
+    color: red;
+    margin-top: 5px;
+}
