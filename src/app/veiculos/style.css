@@ -1,0 +1,78 @@
+body {
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.main-veiculos {
+    margin-top: 120px;
+}
+
+.h1-veiculos {
+    margin-left: 20px;
+    font-weight: 500;
+    font-size: 150%;
+    color: #000;
+}
+
+@media(min-width: 992px) {
+    .h1-veiculos{
+        margin-left: 50px;
+        color: #000;
+    }
+}
+
+@media(min-width: 1200px) {
+    .h1-veiculos{
+        margin-left: 70px;
+        font-size: 2.2rem;
+    }
+}
+
+.error-message {
+    color: red;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.pecas-auto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.veiculo-article {
+    background-color: #bdeafd;
+    color: #000;
+    width: 280px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.veiculo-img {
+    width: 100%;
+    height: 180px;
+    background-color: #ccc;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 15px;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.veiculo-p {
+    font-size: 16px;
+    font-family: "Alegreya Sans SC", sans-serif;
+    text-align: center;
+    min-height: 50px;
+}

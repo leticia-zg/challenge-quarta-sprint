@@ -43,7 +43,7 @@ const Menu = () => {
                 <li><Link href="/#segurado" role="link">Segurado Porto</Link></li>
                 <li><Link href="/#servicos" role="link">Serviços</Link></li>
                 <li><Link href="/duvidas">Dúvidas frequentes</Link></li>
-                <li><Link href="https://www.portoseguro.com.br/pdc/login" className="btn-nav" role="button">Área do colaborador</Link></li>
+                <li><Link href="/veiculos" className="btn-nav" role="button">Área do colaborador</Link></li>
             </ul>
         </nav>
     );
