@@ -1,6 +1,6 @@
 import './Footer.css';
 import Link from "next/link";
-import Image from 'next/image'; // Importando o componente Image do Next.js
+import Image from 'next/image';
 
 const Footer = () => {
     return (
@@ -10,9 +10,9 @@ const Footer = () => {
                     src="/imgs/logobranca.png" 
                     alt="Logo Porto" 
                     className="logo-branca" 
-                    role="img"
-                    width={200} // Definindo as dimensões, você pode ajustar conforme necessário
-                    height={100} // Definindo as dimensões, você pode ajustar conforme necessário
+                    role="img" 
+                    width={150} 
+                    height={70}
                 />
                 <section className="contatos" role="group">
                     <h3>Acompanhe a Porto nas Redes Sociais</h3>
@@ -22,8 +22,8 @@ const Footer = () => {
                                 <Image 
                                     src="/imgs/facebook.png" 
                                     alt="Logo do Facebook" 
-                                    width={40} // Ajuste as dimensões conforme necessário
-                                    height={40} // Ajuste as dimensões conforme necessário
+                                    width={24} 
+                                    height={24} 
                                 />
                             </Link>
                         </li>
@@ -32,8 +32,8 @@ const Footer = () => {
                                 <Image 
                                     src="/imgs/instagram.png" 
                                     alt="Logo do Instagram" 
-                                    width={40} // Ajuste as dimensões conforme necessário
-                                    height={40} // Ajuste as dimensões conforme necessário
+                                    width={24} 
+                                    height={24} 
                                 />
                             </Link>
                         </li>
@@ -42,9 +42,9 @@ const Footer = () => {
                                 <Image 
                                     src="/imgs/linkedin.png" 
                                     alt="Logo do LinkedIn" 
-                                    className="linkedin"
-                                    width={40} // Ajuste as dimensões conforme necessário
-                                    height={40} // Ajuste as dimensões conforme necessário
+                                    className="linkedin" 
+                                    width={24} 
+                                    height={24} 
                                 />
                             </Link>
                         </li>
@@ -53,9 +53,9 @@ const Footer = () => {
                                 <Image 
                                     src="/imgs/youtube.png" 
                                     alt="Logo do YouTube" 
-                                    className="youtube"
-                                    width={40} // Ajuste as dimensões conforme necessário
-                                    height={40} // Ajuste as dimensões conforme necessário
+                                    className="youtube" 
+                                    width={30} 
+                                    height={30} 
                                 />
                             </Link>
                         </li>
@@ -64,9 +64,9 @@ const Footer = () => {
                                 <Image 
                                     src="/imgs/twitter.png" 
                                     alt="Logo do Twitter" 
-                                    className="twitter"
-                                    width={40} // Ajuste as dimensões conforme necessário
-                                    height={40} // Ajuste as dimensões conforme necessário
+                                    className="twitter" 
+                                    width={30} 
+                                    height={30} 
                                 />
                             </Link>
                         </li>
@@ -78,9 +78,9 @@ const Footer = () => {
                         <Image 
                             src="/imgs/app store.png" 
                             alt="App Store" 
-                            className="appstore"
-                            width={200} // Ajuste as dimensões conforme necessário
-                            height={60} // Ajuste as dimensões conforme necessário
+                            className="appstore" 
+                            width={120} 
+                            height={36}  
                         />
                     </Link>
                     <Link href="https://play.google.com/store/apps/details?id=br.com.portoseguro.experienciacliente.mundoporto&referrer=utm_source%3Dhub-vendas%26utm_medium%3Dcta-download%26utm_campaign%3Dhub-vendas-rodape&pli=1"
@@ -88,9 +88,9 @@ const Footer = () => {
                         <Image 
                             src="/imgs/google play.png" 
                             alt="Google Play" 
-                            className="googleplay"
-                            width={200} // Ajuste as dimensões conforme necessário
-                            height={60} // Ajuste as dimensões conforme necessário
+                            className="googleplay" 
+                            width={120} 
+                            height={36}  
                         />
                     </Link>
                 </section>

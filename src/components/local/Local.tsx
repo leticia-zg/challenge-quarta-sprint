@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useEffect, useState } from 'react';
-import Image from 'next/image'; // Importando o componente Image do Next.js
+import Image from 'next/image'; 
 import "./Local.css";
 
 interface Local {
@@ -29,26 +29,26 @@ const Local = () => {
 
         // Exemplo de locais já definidos no mapa
         const locais: Local[] = [
-          { lat: -23.5346, lng: -46.7214, nome: "CENTRO AUTOMOTIVO - LAPA" },
-          { lat: -23.5631, lng: -46.7325, nome: "CENTRO AUTOMOTIVO - BUTANTÃ" },
-          { lat: -23.5491, lng: -46.4660, nome: "CENTRO AUTOMOTIVO - PENHA TIQUATIRA" },
-          { lat: -23.5304, lng: -46.7301, nome: "CENTRO AUTOMOTIVO - LEOPOLDINA" },
-          { lat: -23.5247, lng: -46.7159, nome: "CENTRO AUTOMOTIVO - PARQUE SAO DOMINGOS" },
-          { lat: -23.5079, lng: -46.9072, nome: "CENTRO AUTOMOTIVO - BARUERI" },
-          { lat: -23.3386, lng: -46.9423, nome: "CENTRO AUTOMOTIVO - JANDIRA" },
-          { lat: -23.5272, lng: -46.8443, nome: "CENTRO AUTOMOTIVO - CARAPICUIBA VILA CALDAS" },
-          { lat: -23.5328, lng: -46.7927, nome: "CENTRO AUTOMOTIVO - OSASCO HELENA MARIA" },
-          { lat: -23.5320, lng: -46.8044, nome: "CENTRO AUTOMOTIVO - OSASCO CENTRO" },
-          { lat: -23.5432, lng: -46.6669, nome: "CENTRO AUTOMOTIVO - USP AV. CORIFEU" },
-          { lat: -23.5280, lng: -46.6281, nome: "CENTRO AUTOMOTIVO - CANINDE GLOBAL" },
-          { lat: -23.4589, lng: -46.5330, nome: "CENTRO AUTOMOTIVO - GUARULHOS TIMOTEO" },
-          { lat: -23.5033, lng: -46.4390, nome: "CENTRO AUTOMOTIVO - ITAIM PAULISTA" },
-          { lat: -23.4541, lng: -46.4387, nome: "CENTRO AUTOMOTIVO - GUAIANAZES" },
-          { lat: -23.5510, lng: -46.3143, nome: "CENTRO AUTOMOTIVO - SUZANO" },
-          { lat: -23.5033, lng: -46.4390, nome: "CENTRO AUTOMOTIVO - ITAIM PAULISTA" }, // Repetido
-          { lat: -23.7255, lng: -46.5634, nome: "CENTRO AUTOMOTIVO - SBC / ASSUNÇÃO" },
-          { lat: -23.6394, lng: -46.8320, nome: "CENTRO AUTOMOTIVO - VARGEM GRANDE PAULISTA" },
-          { lat: -23.5070, lng: -46.9074, nome: "CENTRO AUTOMOTIVO - ALPHAVILLE" },
+            { lat: -23.5346, lng: -46.7214, nome: "CENTRO AUTOMOTIVO - LAPA" },
+            { lat: -23.5631, lng: -46.7325, nome: "CENTRO AUTOMOTIVO - BUTANTÃ" },
+            { lat: -23.5491, lng: -46.4660, nome: "CENTRO AUTOMOTIVO - PENHA TIQUATIRA" },
+            { lat: -23.5304, lng: -46.7301, nome: "CENTRO AUTOMOTIVO - LEOPOLDINA" },
+            { lat: -23.5247, lng: -46.7159, nome: "CENTRO AUTOMOTIVO - PARQUE SAO DOMINGOS" },
+            { lat: -23.5079, lng: -46.9072, nome: "CENTRO AUTOMOTIVO - BARUERI" },
+            { lat: -23.3386, lng: -46.9423, nome: "CENTRO AUTOMOTIVO - JANDIRA" },
+            { lat: -23.5272, lng: -46.8443, nome: "CENTRO AUTOMOTIVO - CARAPICUIBA VILA CALDAS" },
+            { lat: -23.5328, lng: -46.7927, nome: "CENTRO AUTOMOTIVO - OSASCO HELENA MARIA" },
+            { lat: -23.5320, lng: -46.8044, nome: "CENTRO AUTOMOTIVO - OSASCO CENTRO" },
+            { lat: -23.5432, lng: -46.6669, nome: "CENTRO AUTOMOTIVO - USP AV. CORIFEU" },
+            { lat: -23.5280, lng: -46.6281, nome: "CENTRO AUTOMOTIVO - CANINDE GLOBAL" },
+            { lat: -23.4589, lng: -46.5330, nome: "CENTRO AUTOMOTIVO - GUARULHOS TIMOTEO" },
+            { lat: -23.5033, lng: -46.4390, nome: "CENTRO AUTOMOTIVO - ITAIM PAULISTA" },
+            { lat: -23.4541, lng: -46.4387, nome: "CENTRO AUTOMOTIVO - GUAIANAZES" },
+            { lat: -23.5510, lng: -46.3143, nome: "CENTRO AUTOMOTIVO - SUZANO" },
+            { lat: -23.5033, lng: -46.4390, nome: "CENTRO AUTOMOTIVO - ITAIM PAULISTA" }, // Repetido
+            { lat: -23.7255, lng: -46.5634, nome: "CENTRO AUTOMOTIVO - SBC / ASSUNÇÃO" },
+            { lat: -23.6394, lng: -46.8320, nome: "CENTRO AUTOMOTIVO - VARGEM GRANDE PAULISTA" },
+            { lat: -23.5070, lng: -46.9074, nome: "CENTRO AUTOMOTIVO - ALPHAVILLE" },
         ];
 
         adicionarMarcadores(locais);
@@ -112,7 +112,7 @@ const Local = () => {
         return () => {
             document.body.removeChild(script);
         };
-    }, []); // Depende de `initMap` se necessário, mas sem mudanças após a primeira renderização
+    }, [initMap]); 
 
     return (
         <section className="localizacao">
@@ -130,35 +130,53 @@ const Local = () => {
                     className="img-map"
                     src="/imgs/lupa.png"
                     alt="Buscar"
-                    width={24} // Adicione dimensões ao usar <Image />
-                    height={24}
                     onClick={buscarPorCep}
+                    width={20}  
+                    height={20} 
                 />
             </form>
             <section className="locais">
                 <div>
                     <ul className="oficinas">
                         <li>
-                            <Image
-                                src="/imgs/local.png"
+                            <Image 
+                                src="/imgs/local.png" 
                                 alt="icone localização"
-                                width={24}
-                                height={24}
+                                width={32}  
+                                height={42} 
                             />
                             <p>Rua LUIS GAMA 185 - MOOCA - SAO PAULO/SP</p>
                             <hr />
                         </li>
                         <li>
-                            <Image
-                                src="/imgs/local.png"
+                            <Image 
+                                src="/imgs/local.png" 
                                 alt="icone localização"
-                                width={24}
-                                height={24}
+                                width={32}  
+                                height={42}  
                             />
                             <p>Rua CONSELHEIRO RAMALHO 487 - BELA VISTA - SAO PAULO/SP</p>
                             <hr />
                         </li>
-                        {/* Adicionar outros locais conforme necessário */}
+                        <li>
+                            <Image 
+                                src="/imgs/local.png" 
+                                alt="icone localização"
+                                width={32}  
+                                height={42} 
+                            />
+                            <p>Rua HELVETIA 468 - CAMPOS ELISEOS - SAO PAULO/SP</p>
+                            <hr />
+                        </li>
+                        <li>
+                            <Image 
+                                src="/imgs/local.png" 
+                                alt="icone localização"
+                                width={32}  
+                                height={42} 
+                            />
+                            <p>Rua DOUTOR FREIRE 192 - BRÁS - SÃO PAULO/SP</p>
+                        </li>
                     </ul>
                     <div className="button">
                         <Link href="https://www.portoseguro.com.br/fale-conosco/contatos/enderecos/oficinas-referenciadas">
