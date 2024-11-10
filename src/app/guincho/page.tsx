@@ -1,4 +1,4 @@
-"use client"; 
+"use client"; // Se estiver usando Next.js 13 ou superior
 import './style.css';
 import Footer from '../../components/footer/Footer';
 import { Layout } from "../../components/layout/Layout";

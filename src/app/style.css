@@ -462,19 +462,17 @@ span {
  
 .respostas {
     padding-bottom: 10px;
-    padding-left: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 10px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     text-align: left;
     flex-direction: column;
 }
- 
+
 .div-resposta.teste {
     display: block;
-}
- 
-.div-resposta {
-    display: none;
 }
  

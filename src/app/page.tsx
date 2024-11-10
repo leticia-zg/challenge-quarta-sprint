@@ -1,8 +1,18 @@
+"use client";
+import { useState } from 'react';
 import Link from "next/link";
 import { Layout } from '../components/layout/Layout';
+import Footer from "../components/footer/Footer";
+import Local from "../components/local/Local";
 import './style.css';
 
 export default function Home() {
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null); 
+
+  const handleToggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index); 
+};
   return (
     <>
       <Layout>
@@ -13,7 +23,7 @@ export default function Home() {
               <h1 className="h1-home">SEGURO AUTO</h1>
               <h3 className="h3-home">Cada vez <br /> mais praticidade</h3>
               <p className="p-home">Com um novo serviço para você!</p>
-              <Link href="#servicos">
+              <Link href="https://chatoficinavirtual.netlify.app/">
                 <button>Confira</button>
               </Link>
             </div>
@@ -25,7 +35,7 @@ export default function Home() {
           </section>
           <div className="historia">
             <section className="sobre" role="group">
-              <img src="/imgs/ferramentas.jpg" 
+              <img src="/imgs/ferramentas.jpg"
                 alt="ferramentas" 
                 className="ferramentas" 
                 role="img" />
@@ -106,53 +116,87 @@ export default function Home() {
                 </Link>
               </div>
               <div className="servico">
-                <a href="https://chatporto.streamlit.app/" target="_blank" rel="noopener noreferrer">
-                  <img src="/imgs/notediagnostico.jpg" alt="diagnóstico" />
+              <Link href="https://chatoficinavirtual.netlify.app/">
+                <img src="/imgs/notediagnostico.jpg" alt="diagnóstico" />
                   <h3 id="local-section">Auto Diagnóstico</h3>
                   <p>Realize o auto diagnóstico online.</p>
-                </a>
+              </Link>
               </div>
             </article>
           </section>
+          <Local />
           <p className="duvidafrequente">Dúvidas Frequentes</p>
           <section className="perguntas">
-            <article role="article" className="article">
-              <p className="p-pergunta">Segurado Porto possui desconto nos serviços?</p>
-              <img src="/imgs/seta-para-baixo (2).png" className="seta-baixo" alt="seta para baixo" role="button" aria-expanded="false" />
-            </article>
-            <div className="div-resposta">
-              <p className="respostas">Sim, o segurado da Porto Seguro possui descontos em diversos serviços automotivos,
-                residenciais e em estabelecimentos parceiros.
-                Esses benefícios incluem revisões de veículos, assistência técnica e descontos exclusivos.</p>
-            </div>
-            <article role="article" className="article">
-              <p className="p-pergunta">Como faço para adquirir uma peça?</p>
-              <img src="/imgs/seta-para-baixo (2).png" className="seta-baixo" alt="seta para baixo" role="button" aria-expanded="false" />
-            </article>
-            <div className="div-resposta">
-              <p className="respostas">Basta acessar a página de Auto Peças, verificar a peça que precisa e entrar em
-                contato com um de nossos mecânicos parceiros.</p>
-            </div>
-            <article role="article" className="article">
-              <p className="p-pergunta">Como faço para realizar o auto diagnóstico?</p>
-              <img src="/imgs/seta-para-baixo (2).png" className="seta-baixo" alt="seta para baixo" role="button" aria-expanded="false" />
-            </article>
-            <div className="div-resposta">
-              <p className="respostas">Para realizar o auto diagnóstico acesse a página de serviços e vá para a página de
-                auto diagnósticos.
-                Insira os problemas notados no seu veículo e receba de imediato um diagnóstico prévio.</p>
-            </div>
-            <article role="article" className="article">
-              <p className="p-pergunta">Como faço para me tornar um segurado?</p>
-              <img src="/imgs/seta-para-baixo (2).png" className="seta-baixo" alt="seta para baixo" role="button" aria-expanded="false" />
-            </article>
-            <div className="div-resposta">
-              <p className="respostas">Para se tornar um segurado Porto, basta entrar em contato com um corretor
-                autorizado ou ligar para a central de atendimento.
-                Eles irão orientá-lo sobre os planos disponíveis e o processo de contratação.</p>
-            </div>
+          <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(0)}>
+                            <p className="p-pergunta">Segurado Porto possui desconto nos serviços?</p>
+                            <img
+                                src={openIndex === 0 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
+                                aria-expanded={openIndex === 0}
+                                className="seta-baixo"
+                                alt="seta"
+                                role="button"
+                                tabIndex={0}
+                            />
+                        </article>
+                        {openIndex === 0 && (
+                            <div tabIndex={0} className="div-resposta">
+                                <p className="respostas">Sim, o segurado da Porto Seguro possui descontos em diversos serviços automotivos, residenciais e em estabelecimentos parceiros...</p>
+                            </div>
+                        )}
+
+                        <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(1)}>
+                            <p className="p-pergunta">Como faço para adquirir uma peça?</p>
+                            <img
+                                src={openIndex === 1 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
+                                aria-expanded={openIndex === 1}
+                                className="seta-baixo"
+                                alt="seta"
+                                role="button"
+                                tabIndex={0}
+                            />
+                        </article>
+                        {openIndex === 1 && (
+                            <div tabIndex={0} className="div-resposta">
+                                <p className="respostas">Basta acessar a página de Auto Peças, verificar a peça que precisa e entrar em contato com um de nossos mecânicos parceiros.</p>
+                            </div>
+                        )}
+
+                        <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(2)}>
+                            <p className="p-pergunta">Como faço para realizar o auto diagnóstico?</p>
+                            <img
+                                src={openIndex === 2 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
+                                aria-expanded={openIndex === 2}
+                                className="seta-baixo"
+                                alt="seta"
+                                role="button"
+                                tabIndex={0}
+                            />
+                        </article>
+                        {openIndex === 2 && (
+                            <div tabIndex={0} className="div-resposta">
+                                <p className="respostas">Para realizar o auto diagnóstico, acesse a página de serviços e vá para a página de auto diagnósticos. Insira os problemas notados no seu veículo e receba de imediato um diagnóstico prévio.</p>
+                            </div>
+                        )}
+
+                        <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(3)}>
+                            <p className="p-pergunta">Como faço para me tornar um segurado?</p>
+                            <img
+                                src={openIndex === 3 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
+                                aria-expanded={openIndex === 3}
+                                className="seta-baixo"
+                                alt="seta"
+                                role="button"
+                                tabIndex={0}
+                            />
+                        </article>
+                        {openIndex === 3 && (
+                            <div tabIndex={0} className="div-resposta">
+                                <p className="respostas">Para se tornar um segurado Porto, basta entrar em contato com um corretor autorizado ou ligar para a central de atendimento. Eles irão orientá-lo sobre os planos disponíveis e o processo de contratação.</p>
+                            </div>
+                        )}
           </section>
         </main>
+        <Footer />
       </Layout>
     </>
   );

@@ -1,3 +1,4 @@
+/* Configuração geral */
 *,
 *::before,
 *::after {
@@ -27,7 +28,7 @@ nav a {
 .logo {
     width: 130px;
     height: auto;
-    margin-top: 25px;
+    margin-top: 5px;
 }
 
 @media (min-width: 576px) {
@@ -42,128 +43,66 @@ nav a {
     }
 }
 
-.menu-fechado {
+/* Ícone do menu (hambúrguer) */
+.menu-icon {
     width: 37px;
     height: 37px;
-    margin-top: 0;
     margin-right: 1%;
-}
-
-@media (min-width: 576px) {
-    .menu-fechado {
-        margin-right: 20px;
-    }
+    cursor: pointer;
 }
 
 @media (min-width: 991px) {
-    .menu-fechado {
+    .menu-icon {
         display: none;
     }
 }
 
-
-.nav {
-    @media (max-width: 991px) {
-        text-align: center;
-        box-shadow: none; 
-    }
-
-    @media (min-width: 991px) {
-        display: flex;
-        align-items: center;
-    }
+/* Lista de navegação */
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none; /* Oculta o menu por padrão */
+    transition: all 0.3s ease;
 }
 
-
-.fechado {
-    @media (max-width: 991px) {
-        display: none;
-        position: absolute;
-        top: 81px;
-        right: 0;
-        width: 100%;
-        background-color: #fff;
-        color: #000;
-        z-index: 1000;
-        overflow: auto;
-    }
-
-    @media (min-width: 991px) {
-        display: flex;
-        justify-content: flex-end;
-        margin: 10px 30px 0 0;
-    }
-}
-
-
-.active {
-    display: block;
-    position: absolute;
-    top: 81px;
+/* Exibe o menu em colunas quando aberto em telas menores */
+.aberto {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 80px; /* Abaixo da navbar */
     right: 0;
     width: 100%;
-    height: 250px;
     background-color: #fff;
+    padding: 20px 0;
+    z-index: 999;
+}
+
+.aberto li {
+    margin: 15px 0;
+    text-align: center;
+}
+
+.aberto li a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #000;
     font-weight: 600;
-    animation: fadeIn 0.3s ease-out forwards;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-
-@media (max-width: 991px) {
-    .active li {
-        list-style: none;
-        font-size: 20px;
-        margin-top: 20px;
-    }
-}
-
-.fechado li {
-    position: relative;
-    list-style: none;
-    padding-bottom: 10px;
-}
-
+/* Estilo para menu em telas maiores */
 @media (min-width: 991px) {
-    .fechado li {
+    .list {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-right: 30px;
+    }
+
+    .list li {
         margin-left: 50px;
     }
-}
-
-.fechado li a {
-    @media (max-width: 991px) {
-        text-decoration: none;
-        font-weight: 600;
-        color: #000;
-    }
-
-    @media (min-width: 991px) {
-        text-decoration: none;
-        color: #000;
-        font-size: 17px;
-    }
-}
-
-.fechado li:not(:last-child)::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 3px;
-    background-color: #A5D364;
-    transition: width 0.3s ease-in-out;
-}
-
-.fechado li:not(:last-child):hover::after {
-    width: 100%;
 }
 
 .btn-nav {
