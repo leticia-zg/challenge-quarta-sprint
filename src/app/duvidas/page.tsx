@@ -5,6 +5,7 @@ import Footer from "../../components/footer/Footer";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import Image from 'next/image';
 
 import { useState } from 'react';
 
@@ -34,7 +35,7 @@ export default function Duvidas() {
                     <section className="perguntas">
                         <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(0)}>
                             <p className="p-pergunta">Segurado Porto possui desconto nos serviços?</p>
-                            <img
+                            <Image width={20} height={20}
                                 src={openIndex === 0 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
                                 aria-expanded={openIndex === 0}
                                 className="seta-baixo"
@@ -51,7 +52,7 @@ export default function Duvidas() {
 
                         <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(1)}>
                             <p className="p-pergunta">Como faço para adquirir uma peça?</p>
-                            <img
+                            <Image width={20} height={20}
                                 src={openIndex === 1 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
                                 aria-expanded={openIndex === 1}
                                 className="seta-baixo"
@@ -68,7 +69,7 @@ export default function Duvidas() {
 
                         <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(2)}>
                             <p className="p-pergunta">Como faço para realizar o auto diagnóstico?</p>
-                            <img
+                            <Image width={20} height={20}
                                 src={openIndex === 2 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
                                 aria-expanded={openIndex === 2}
                                 className="seta-baixo"
@@ -85,7 +86,7 @@ export default function Duvidas() {
 
                         <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(3)}>
                             <p className="p-pergunta">Como faço para me tornar um segurado?</p>
-                            <img
+                            <Image width={20} height={20}
                                 src={openIndex === 3 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
                                 aria-expanded={openIndex === 3}
                                 className="seta-baixo"
@@ -102,7 +103,7 @@ export default function Duvidas() {
 
                         <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(4)}>
                             <p className="p-pergunta">Quais são as oficinas parceiras?</p>
-                            <img
+                            <Image width={20} height={20}
                                 src={openIndex === 4 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
                                 aria-expanded={openIndex === 4}
                                 className="seta-baixo"
@@ -119,7 +120,7 @@ export default function Duvidas() {
 
                         <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(5)}>
                             <p className="p-pergunta">Como faço para agendar uma revisão?</p>
-                            <img
+                            <Image width={20} height={20}
                                 src={openIndex === 5 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
                                 aria-expanded={openIndex === 5}
                                 className="seta-baixo"
@@ -136,7 +137,7 @@ export default function Duvidas() {
 
                         <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(6)}>
                             <p className="p-pergunta">Tem algum desconto no valor das peças?</p>
-                            <img
+                            <Image width={20} height={20}
                                 src={openIndex === 6 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
                                 aria-expanded={openIndex === 6}
                                 className="seta-baixo"
@@ -153,7 +154,7 @@ export default function Duvidas() {
 
                         <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(7)}>
                             <p className="p-pergunta">Quanto tempo demora para o guincho chegar?</p>
-                            <img
+                            <Image width={20} height={20}
                                 src={openIndex === 7 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
                                 aria-expanded={openIndex === 7}
                                 className="seta-baixo"
@@ -170,7 +171,7 @@ export default function Duvidas() {
 
                         <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(8)}>
                             <p className="p-pergunta">Como faço para agendar um serviço com um mecânico parceiro?</p>
-                            <img
+                            <Image width={20} height={20}
                                 src={openIndex === 8 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
                                 aria-expanded={openIndex === 8}
                                 className="seta-baixo"
@@ -187,7 +188,7 @@ export default function Duvidas() {
 
                         <article role="article" tabIndex={0} className="article" onClick={() => handleToggle(9)}>
                             <p className="p-pergunta">Posso usar a mesma peça em outros veículos?</p>
-                            <img
+                            <Image width={20} height={20}
                                 src={openIndex === 9 ? "/imgs/seta-cima.png" : "/imgs/seta-para-baixo (2).png"}
                                 aria-expanded={openIndex === 9}
                                 className="seta-baixo"
@@ -207,7 +208,7 @@ export default function Duvidas() {
                         <form role="form" id="feedbackForm" onSubmit={handleSubmit(onSubmit)}>
                             <div className="div-chat">
                                 <label htmlFor="duvida" className="label-duvida">Escreva abaixo para que possamos aprimorar nossas dúvidas frequentes ou acesse o chat online para ser respondido(a) de imediato!</label>
-                                <img 
+                                <Image width={44} height={44} 
                                     src="/imgs/chat.png" 
                                     alt="chat" 
                                     className="chat" 

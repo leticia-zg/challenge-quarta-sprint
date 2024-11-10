@@ -2,6 +2,7 @@
 import './style.css';
 import Footer from '../../components/footer/Footer';
 import { Layout } from "../../components/layout/Layout";
+import Image from 'next/image';
 
 export default function Pecas() {
 
@@ -11,7 +12,8 @@ export default function Pecas() {
             <main className="main-pecas">
                 <section className="pecas-auto">
                     <article className="pecas-article">
-                        <img className="pecas-img" src="/imgs/bombadagua.png" alt="Imagem de uma Bomba d'água" />
+                        <Image className="pecas-img" width={300} 
+                    height={180} src="/imgs/bombadagua.png" alt="Imagem de uma Bomba d'água" />
                         <div className="text-container">
                         <h3 className="nome-peca">Bomba d'água</h3>
                             <p className="pecas-p">
@@ -21,7 +23,8 @@ export default function Pecas() {
                         </div>
                     </article>
                     <article className="pecas-article">
-                        <img className="pecas-img" src="/imgs/filtroar.png" alt="Imagem de um Filtro de ar" />
+                        <Image className="pecas-img" width={300} 
+                    height={180} src="/imgs/filtroar.png" alt="Imagem de um Filtro de ar" />
                         <div className="text-container">
                             <h3 className="nome-peca">Filtro de Ar</h3>
                             <p className="pecas-p">
@@ -31,7 +34,8 @@ export default function Pecas() {
                         </div>
                     </article>
                     <article className="pecas-article">
-                        <img className="pecas-img" src="/imgs/cabosdevela.png" alt="Imagem de Cabos de vela" />
+                        <Image className="pecas-img" width={300} 
+                    height={180} src="/imgs/cabosdevela.png" alt="Imagem de Cabos de vela" />
                         <div className="text-container">
                         <h3 className="nome-peca">Cabos de Vela</h3>
                             <p className="pecas-p">
@@ -41,7 +45,8 @@ export default function Pecas() {
                         </div>
                     </article>
                     <article className="pecas-article">
-                        <img className="pecas-img" src="/imgs/discosdefreio.png" alt="Imagem de Discos de freio" />
+                        <Image className="pecas-img" width={300} 
+                    height={180} src="/imgs/discosdefreio.png" alt="Imagem de Discos de freio" />
                         <div className="text-container">
                         <h3 className="nome-peca">Discos de Freio</h3>
                             <p className="pecas-p">
@@ -53,7 +58,8 @@ export default function Pecas() {
                 </section>
                 <section className="cont-pecas">
                     <article className="pecas-article">
-                        <img className="pecas-img" src="/imgs/buchasuspensao.png" alt="Imagem de Buchas de suspensão" />
+                        <Image className="pecas-img" width={300} 
+                    height={180} src="/imgs/buchasuspensao.png" alt="Imagem de Buchas de suspensão" />
                         <div className="text-container">
                         <h3 className="nome-peca">Buchas de Suspensão</h3>
                             <p className="pecas-p">
@@ -63,7 +69,8 @@ export default function Pecas() {
                         </div>
                     </article>
                     <article className="pecas-article">
-                        <img className="pecas-img" src="/imgs/bateria.png" alt="Imagem de uma Bateria" />
+                        <Image className="pecas-img" width={300} 
+                    height={180} src="/imgs/bateria.png" alt="Imagem de uma Bateria" />
                         <div className="text-container">
                         <h3 className="nome-peca">Bateria</h3>
                             <p className="pecas-p">
@@ -73,7 +80,8 @@ export default function Pecas() {
                         </div>
                     </article>
                     <article className="pecas-article">
-                        <img className="pecas-img" src="/imgs/cilindromestre.png" alt="Imagem de um Cilindro mestre" />
+                        <Image className="pecas-img" width={300} 
+                    height={180} src="/imgs/cilindromestre.png" alt="Imagem de um Cilindro mestre" />
                         <div className="text-container">
                         <h3 className="nome-peca">Cilindro Mestre</h3>
                             <p className="pecas-p">
@@ -83,7 +91,8 @@ export default function Pecas() {
                         </div>
                     </article>
                     <article className="pecas-article">
-                        <img className="pecas-img" src="/imgs/pastilha.png" alt="Imagem de uma Pastilha de freio" />
+                        <Image className="pecas-img" width={300} 
+                    height={180} src="/imgs/pastilha.png" alt="Imagem de uma Pastilha de freio" />
                         <div className="text-container">
                         <h3 className="nome-peca">Pastilhas de Freio</h3>
                             <p className="pecas-p">
@@ -95,7 +104,8 @@ export default function Pecas() {
                 </section>
                 <section className="maispecas">
                     <article className="pecas-article">
-                        <img className="pecas-img" src="/imgs/tensionador.png" alt="Imagem de um Tensionador" />
+                        <Image className="pecas-img" width={300} 
+                    height={180} src="/imgs/tensionador.png" alt="Imagem de um Tensionador" />
                         <div className="text-container">
                         <h3 className="nome-peca">Tensionador</h3>
                             <p className="pecas-p">
@@ -105,7 +115,8 @@ export default function Pecas() {
                         </div>
                     </article>
                     <article className="pecas-article">
-                        <img className="pecas-img" src="/imgs/radiador.png" alt="Imagem de um Radiador" />
+                        <Image className="pecas-img" width={300} 
+                    height={180} src="/imgs/radiador.png" alt="Imagem de um Radiador" />
                         <div className="text-container">
                         <h3 className="nome-peca">Radiador</h3>
                             <p className="pecas-p">
@@ -115,7 +126,8 @@ export default function Pecas() {
                         </div>
                     </article>
                     <article className="pecas-article">
-                        <img className="pecas-img" src="/imgs/rolamentos.png" alt="Imagem de Rolamentos" />
+                        <Image className="pecas-img" width={300} 
+                    height={180} src="/imgs/rolamentos.png" alt="Imagem de Rolamentos" />
                         <div className="text-container">
                         <h3 className="nome-peca">Rolamentos</h3>
                             <p className="pecas-p">
@@ -125,7 +137,8 @@ export default function Pecas() {
                         </div>
                     </article>
                     <article className="pecas-article">
-                        <img className="pecas-img" src="/imgs/terminaldirecao.png" alt="Imagem de um Terminal de direção" />
+                        <Image className="pecas-img" width={300} 
+                    height={180} src="/imgs/terminaldirecao.png" alt="Imagem de um Terminal de direção" />
                         <div className="text-container">
                         <h3 className="nome-peca">Terminal de Direção</h3>
                             <p className="pecas-p">

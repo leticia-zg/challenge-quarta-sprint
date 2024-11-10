@@ -1,10 +1,11 @@
-"use client"; // Se estiver usando Next.js 13 ou superior
+"use client"; 
 import './style.css';
 import Footer from '../../components/footer/Footer';
 import { Layout } from "../../components/layout/Layout";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import Image from 'next/image';
 
 const schema = yup.object().shape({
     origem: yup.string().required("*Campo obrigatório"),
@@ -52,7 +53,8 @@ export default function Guincho() {
                         <span>R$ 349,90 em até 10x sem juros</span>
                     </div>
                     <div className="imagem-container-guincho">
-                        <img src="/imgs/guincho.png" alt="Imagem de um guincho" className="imagem-guincho" />
+                        <Image width={440} 
+                    height={305} src="/imgs/guincho.png" alt="Imagem de um guincho" className="imagem-guincho" />
                     </div>
                     <form id="form-guincho" aria-labelledby="form-guincho-heading" onSubmit={handleSubmit(onSubmit)}>
                         <h2 id="form-guincho-heading" className="visually-hidden">Formulário de Solicitação de Guincho</h2>
