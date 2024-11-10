@@ -24,7 +24,7 @@ const Menu = () => {
                 />
             </Link>
             <div
-                className="menu-icon-wrapper"
+                className="menu-icon"
                 aria-expanded={isClick ? "true" : "false"}
                 onClick={toggleNavbar}
                 role="button"
